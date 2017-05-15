@@ -23,6 +23,7 @@ public class Scherm extends JFrame implements ActionListener{
     private JPanel  jp1, jp2, jp3, jp4, jp5, jp6;
     private boolean start = false;
     private ArrayList<Product> producten;
+    private int maxRuimte;
     
     
     public Scherm() {
@@ -87,17 +88,24 @@ public class Scherm extends JFrame implements ActionListener{
         }
         
         if (e.getSource() == jbDoos){
-            //code voor Doos knop
+            DialoogDoos dialoog = new DialoogDoos(this);
+            dialoog.setVisible(true);
+            
+            if(dialoog.getIsOK()) {
+                this.maxRuimte = dialoog.getDoosGrootte();
+            }
         }
         repaint();
     }
     
+    boolean getStart() {
+        return start;
+    }
     public ArrayList getProducten(){
         return producten;
     }
-    
-    boolean getStart() {
-        return start;
-    } 
+    public int getRuimte(){
+        return maxRuimte;
+    }
     
 }
