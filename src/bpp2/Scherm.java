@@ -104,7 +104,7 @@ public class Scherm extends JFrame implements ActionListener{
     public ArrayList getProducten(){
         return producten;
     }
-    public int getRuimte(){
+    public int getMaxRuimte(){
         return maxRuimte;
     }
     
