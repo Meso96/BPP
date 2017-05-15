@@ -100,6 +100,12 @@ public class Scherm extends JFrame implements ActionListener{
     
     boolean getStart() {
         return start;
-    } 
+    }
+    public ArrayList getProducten(){
+        return producten;
+    }
+    public int getRuimte(){
+        return maxRuimte;
+    }
     
 }
